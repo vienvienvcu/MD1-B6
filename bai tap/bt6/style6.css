@@ -155,13 +155,15 @@
     width: 100%;
     height: 20vh;
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 .footer-col1{
     display: flex;
     justify-content: left;
     align-items: center;
     width: 25%;
-    /* background-color: green; */
     margin-left: 20px;
 }
 .footer-col1 img{
@@ -184,9 +186,7 @@
     width: 50%;
     display: block;
     margin-left: 80px;
-    /* display: flex;
-    justify-content: center; */
-    /* background-color: yellow; */
+  
   
 }
 .footer-col2-icon{
@@ -209,26 +209,34 @@
 .footer-col2 .footer-line div{
     color: #F3F8FF;
 }
-.footer-col2 .footer-line .boder{
+.footer-line .boder input{
+    display: inline-block;
+    width: 300px;
+    background-color: black;
+    height: 2px;
+   color: #07f617 !important;
+
+}
+
+/* .footer-col2 .footer-line .boder{
     width: 70%;
     height: 2px;
     background-color: rgb(255, 255, 255);
     margin-top: 8px;
     position: relative;
     border-radius: 1px;
-}
-.footer-col2 .footer-line .boder::before{
+} */
+/* .footer-col2 .footer-line .boder::before{
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     width: 50%;
     background-color: rgb(123, 123, 123);
-}
+} */
 .footer-col3{
     display: flex;
     width: 25%;
-    /* background-color: blue; */
     justify-content: right;
     align-items: center;
     margin-right: 20px;
@@ -246,28 +254,46 @@
 } 
 .footer-col3-text::before{
     position: absolute; 
-    content: "";  
-    bottom: -160px;
+    content: "my music";  
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 30px;
     background-color: #FFE79B;
     visibility: hidden;
+    text-align: end;
+    z-index: 2;
+    /* padding-right: 60px;   */
+    /* margin-right: 100px; */
+}
+.footer-col3-text::after{
+    position: absolute; 
+    content: "";
+    width: 0;
+	height: 0;
+    bottom: 0;
+    right: 160px;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-bottom: 40px solid  #FFE79B;
+    visibility: hidden;
+    z-index: 1;
+
+}
+.footer-col3-text:hover::after{
+    visibility:visible;
 }
 .footer-col3-text:hover::before{
     visibility: visible;
-    /* color: #07f617; */
 }
 .footer-col3-text:hover{
     color: #07f617;
 }
 .footer-col3-line{
-    width: 100px;
+    width: 160px;
     height: 1px;
     background-color: #F3F8FF;
 }
-
-
 
 
 
